@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Website</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/font-awesome.css')}}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-training-studio.css')}}">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+    }
+    
+    .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    .navbar img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    .navbar .right {
+        display: flex;
+        align-items: center;
+    }
+    .sidebar {
+        width: 200px;
+        background-color: rgba(255, 87, 34, 0.7); /* Transparent orange background */
+        padding: 20px;
+        float: left;
+        height: 100vh;
+        margin-top: 70px; /* Adjusted to avoid overlapping with the navbar */
+    }
+    .sidebar button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #FF5722;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .sidebar button:last-child {
+        margin-bottom: 0;
+    }
+    .main-content {
+        margin-top: 70px; /* Adjusted to avoid overlapping with the navbar */
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap; /* Allows the cards to wrap to the next row */
+        justify-content: space-around; /* Centers the cards horizontally */
+        background-image: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg');
+        background-size: 120%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: calc(100vh - 70px); /* Adjusted to account for the navbar height */
+        opacity: 0.7;
+    }
+    .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 30px;
+        margin-bottom: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 0 0 calc(33.33% - 40px); /* Adjusted to account for margin and padding */
+        height: 25vh;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    .card h3, .card p {
+        margin: 0;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        clear: both;
+    }
+    .card button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px; /* Added margin to separate button from other content */
+        background-color: #FF5722;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .exercise-image {
+    max-width: 50%; /* Ensure the image doesn't exceed the width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+.card {
+    width: 300px; /* Set a fixed width for the card */
+    height: auto; /* Let the height adjust based on content */
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+</style>
+</head>
+<body>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">fitness<em> Companion</em></a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+                            <li class="main-button"><a href="/logout">Logout</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<div class="sidebar"style="height: calc(100vh - 70px);">
+    <a href="/train2/no_equip/Abs"><button>abs</button></a>
+    <a href="/train2/no_equip/Arms"><button>arms</button></a>
+    <a href="/train2/no_equip/Legs"><button>legs</button></a>
+    <a href="/train2/no_equip/Back"><button>back</button></a>
+</div>
+
+<div class="main-content" style="margin-bottom: -100px;">
+    {% for _ in range(3) %}
+    <div class="card">
+        <img class="exercise-image" src="{{ url_for('static', filename='assets/images/faltu.gif')}}" alt="Exercise 1">
+        <h3>{{posts.Name}}</h3>
+        <p>Equipment: {{posts.Equipment}}</p>
+        <p>Affects: {{posts.BodyPart}}</p>
+        <a href="/post/{{posts.Slug}}"><button>Click me</button></a>
+    </div>
+    {% endfor %}
+    {% for _ in range(3) %}
+    <div class="card">
+        <img class="exercise-image" src="{{ url_for('static', filename='assets/images/faltu.gif')}}" alt="Exercise 1">
+        <h3>{{posts.Name}}</h3>
+        <p>Equipment: {{posts.Equipment}}</p>
+        <p>Affects: {{posts.BodyPart}}</p>
+        <a href="/post/{{posts.Slug}}"><button>Click me</button></a>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+<div class="footer">
+    <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+</div>
+<!-- jQuery -->
+<script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js')}}"></script>
+
+<!-- Bootstrap -->
+<script src="{{ url_for('static', filename='assets/js/popper.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+
+<!-- Plugins -->
+<script src="{{ url_for('static', filename='assets/js/scrollreveal.min.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/waypoints.min.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.counterup.min.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/imgfix.min.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/mixitup.js')}}"></script>
+<script src="{{ url_for('static', filename='assets/js/accordions.js')}}"></script>
+
+<!-- Global Init -->
+<script src="{{ url_for('static', filename='assets/js/custom.js')}}"></script>
+</body>
+</html>

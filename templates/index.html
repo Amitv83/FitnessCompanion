@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+
+    <title>Fitness Companion</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/font-awesome.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-training-studio.css')}}">
+
+</head>
+
+<body>
+
+
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">fitness<em> Companion</em></a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+
+                            <li class="scroll-to-section"><a href="/dashboard">Login</a></li>
+                            <li class="main-button"><a href="/signup">Sign Up</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='assets/images/gym-video.mp4')}}" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>work harder, get stronger</h6>
+                <h2>easy with our <em>guidance</em></h2>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Choose <em>Program</em></h2>
+                        <img src="{{ url_for('static', filename='assets/images/line-dec.png')}}" alt="waves">
+                        
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{{ url_for('static', filename='assets/images/features-first-icon.png')}}" alt="First One">
+        </div>
+                            <div class="right-content">
+                                <h4>Equipment Training</h4>
+                                <p>
+                                    "Equipment training transforms potential into power, sculpting strength and
+                                    resilience with each repetition. Embrace the tools at hand."</p>
+                                <a href="#" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{{ url_for('static', filename='assets/images/features-first-icon.png')}}" alt="second one">
+                            </div>
+                            <div class="right-content">
+                                <h4>upper body training</h4>
+                                <p>"Upper body training builds not just muscles, but confidence and strength from
+                                    within. With each lift and push, you sculpt resilience and redefine your limits."
+                                </p>
+                                <a href="#" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{{ url_for('static', filename='assets/images/features-first-icon.png')}}" alt="training fifth">
+                            </div>
+                            <div class="right-content">
+                                <h4>non-equipment training</h4>
+                                <p>"Non-equipment training harnesses the power of simplicity, utilizing bodyweight and
+                                    creativity to sculpt strength and agility."</p>
+                                <a href="#" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{{ url_for('static', filename='assets/images/features-first-icon.png')}}" alt="gym training">
+                            </div>
+                            <div class="right-content">
+                                <h4>lower body training</h4>
+                                <p>
+                                    "Lower body training lays the foundation for strength and stability, grounding you
+                                    in power with every step. From squats to lunges."</p>
+                                <a href="#" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
+                        <p>"Building a good body and physique is not just about sculpting muscles, but cultivating
+                            discipline and resilience. It's a journey of self-discovery, where dedication meets
+                            determination to unleash the full potential of mind and body. Embrace the process, for every
+                            rep and every choice shapes not just your physique, but the strength of your character."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="section" id="our-classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Our <em>Classes</em></h2>
+                        <img src="{{ url_for('static', filename='assets/images/line-dec.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tabs">
+                <div class="col-lg-4">
+                    <ul>
+                        <li><a href='#tabs-1'><img src="{{ url_for('static', filename='assets/images/tabs-first-icon.png')}}" alt="">Equipment Training Class</a></li>
+                        <li><a href='#tabs-2'><img src="{{ url_for('static', filename='assets/images/tabs-first-icon.png')}}" alt="">non-equipment Training Class</a></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <section class='tabs-content'>
+                        <article id='tabs-1'>
+                            <img src="{{ url_for('static', filename='assets/images/training-image-01.jpg')}}" alt="First Class">
+                            <h4>Equipment Training Class</h4>
+                            <p>"Equipment training classes offer a dynamic and structured approach to fitness, 
+                                utilizing a variety of tools to sculpt strength and endurance. Led by experienced instructors, 
+                                these classes provide guidance and motivation, ensuring proper form and technique. 
+                                From kettlebells to resistance bands, participants engage in a full-body workout,
+                                 challenging muscles and pushing boundaries. With a focus on progression and results, 
+                                 equipment training classes cater to individuals of all fitness levels,
+                                  fostering a supportive and empowering environment for achieving personal goals."
+                            </p>
+                            <div class="main-button">
+                                <a href="#">Start</a>
+                            </div>
+                        </article>
+                        <article id='tabs-2'>
+                            <img src="{{ url_for('static', filename='assets/images/training-image-02.jpg')}}" alt="Second Training">
+                            <h4>Non-equipment Training Class</h4>
+                            <p>
+                                "Non-equipment training classes harness the power of bodyweight exercises and functional movements to build strength and flexibility.
+                                Led by knowledgeable instructors, these classes focus on utilizing the body as the ultimate fitness tool. From yoga to calisthenics,
+                                participants engage in a dynamic workout that improves balance, coordination, and overall fitness.
+                                With an emphasis on core stability and proper form, non-equipment training classes offer a challenging yet accessible approach to physical fitness for all levels.
+                                In these classes, it's not about the equipment, but about unlocking the body's full potential through movement and mindfulness."
+                            </p>
+                                <div class="main-button">
+                                <a href="#">Start</a>
+                            </div>
+                          </article>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Expert <em>Trainers</em></h2>
+                        <img src="{{ url_for('static', filename='assets/images/line-dec.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{{ url_for('static', filename='assets/images/first-trainer.jpg')}}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Strength Trainer</span>
+                            <h4>Bret D. Bowers</h4>
+                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
+                                church-key pour-over seitan flannel.</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{{ url_for('static', filename='assets/images/second-trainer.jpg')}}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Muscle Trainer</span>
+                            <h4>Hector T. Daigl</h4>
+                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
+                                church-key pour-over seitan flannel.</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="{{ url_for('static', filename='assets/images/third-trainer.jpg')}}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Power Trainer</span>
+                            <h4>Paul D. Newman</h4>
+                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
+                                church-key pour-over seitan flannel.</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ** Testimonials Ends ** -->
+
+    <!-- ** Contact Us Area Starts ** -->
+    <section class="section" id="contact-us">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.5379851805767!2d81.63368331475267!3d21.251384085892565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2985a06a84d94d%3A0x74367c007e1f54f5!2sRaipur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1649397667458!5m2!1sen!2sin" 
+    width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" pattern="[^ @]@[^ @]"
+                                            placeholder="Your Email*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="subject" placeholder="Subject">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Message"
+                                            required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    - Designed by <a rel="nofollow" href="https://templatemo.com" class="tm-text-link"
+                        target="_parent">Rubicon Crossers</a><br>
+
+
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js')}}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='assets/js/popper.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+
+    <!-- Plugins -->
+    <script src="{{ url_for('static', filename='assets/js/scrollreveal.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/waypoints.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/imgfix.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/mixitup.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/accordions.js')}}"></script>
+
+    <!-- Global Init -->
+    <script src="{{ url_for('static', filename='assets/js/custom.js')}}"></script>
+
+</body>
+
+</html>
